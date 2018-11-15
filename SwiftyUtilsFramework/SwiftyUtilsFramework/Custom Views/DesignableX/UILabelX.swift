@@ -35,13 +35,13 @@ extension UILabelX {
 
 
 @IBDesignable
-class UILabelX: UILabel {
+open class UILabelX: UILabel {
 
     public var textInsets = UIEdgeInsets.zero {
         didSet { invalidateIntrinsicContentSize() }
     }
 
-    override func textRect(forBounds bounds: CGRect, limitedToNumberOfLines numberOfLines: Int) -> CGRect {
+    override open func textRect(forBounds bounds: CGRect, limitedToNumberOfLines numberOfLines: Int) -> CGRect {
         let insetRect = bounds.inset(by: textInsets)
         let textRect = super.textRect(forBounds: insetRect, limitedToNumberOfLines: numberOfLines)
         let invertedInsets = UIEdgeInsets(top: -textInsets.top,
@@ -51,7 +51,7 @@ class UILabelX: UILabel {
         return textRect.inset(by: invertedInsets)
     }
 
-    override func drawText(in rect: CGRect) {
+    override open func drawText(in rect: CGRect) {
         super.drawText(in: rect.inset(by: textInsets))
     }
 
@@ -157,7 +157,7 @@ class UILabelX: UILabel {
     }
 
     // Override UIView property. The class used to create the layer for instances of this class.
-    override static var layerClass: AnyClass {
+    override open static var layerClass: AnyClass {
         return CAGradientLayer.self
     }
 
@@ -206,7 +206,7 @@ class UILabelX: UILabel {
     }
 
     /// Not yet implemented.
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("not implemented")
     }
 }

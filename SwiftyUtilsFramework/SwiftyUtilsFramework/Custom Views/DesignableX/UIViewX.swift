@@ -9,9 +9,9 @@
 import UIKit
 
 @IBDesignable
-public class UIViewX: BaseView {
+open class UIViewX: BaseView {
     
-    override public func setupViews() {
+    override open func setupViews() {
         super.setupViews()
     }
     
@@ -31,7 +31,7 @@ public class UIViewX: BaseView {
             UpdateView()
         }
     }
-    override public class var layerClass: AnyClass{
+    override open class var layerClass: AnyClass{
         get{
             return CAGradientLayer.self
         }

@@ -8,7 +8,7 @@
 //
 import UIKit
 @IBDesignable
-public class UIButtonX: UIButton {
+open class UIButtonX: UIButton {
     
     enum FromDirection: Int {
         case Top = 0
@@ -36,7 +36,7 @@ public class UIButtonX: UIButton {
     @IBInspectable public var PopInDelay: Double = 0.4
     
     
-    override public func draw(_ rect: CGRect) {
+    override open func draw(_ rect: CGRect) {
         self.clipsToBounds = true
         self.layer.cornerRadius = CornerRadious
         if Animate {
@@ -96,14 +96,14 @@ public class UIButtonX: UIButton {
     }
     
     
-    override public func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+    override open func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
 //        AlphaBefore = alpha
 //        UIView.animate(withDuration: 0.2, delay: 0, options: .allowUserInteraction, animations: {
 //            self.alpha = 0.4
 //        })
         return true
     }
-    override public func endTracking(_ touch: UITouch?, with event: UIEvent?) {
+    override open func endTracking(_ touch: UITouch?, with event: UIEvent?) {
 //        UIView.animate(withDuration: 0.3, delay: 0, options: .allowUserInteraction, animations: {
 //            self.alpha = self.AlphaBefore
 //        })
@@ -126,7 +126,7 @@ public class UIButtonX: UIButton {
         }
     }
     
-    override public class var layerClass: AnyClass{
+    override open class var layerClass: AnyClass{
         get{
             return CAGradientLayer.self
         }

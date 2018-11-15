@@ -8,7 +8,7 @@
 //
 import UIKit
 @IBDesignable
-public class UITextFieldX: UITextField {
+open class UITextFieldX: UITextField {
     
     @IBInspectable public var leftImage: UIImage? {
         didSet {

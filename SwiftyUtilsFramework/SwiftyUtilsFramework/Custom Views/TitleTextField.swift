@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class TitleTextField: UITextField {
+open class TitleTextField: UITextField {
     
     fileprivate var titleLabel: UILabel!
     public var titleHeight: CGFloat = 27
@@ -53,12 +53,12 @@ public class TitleTextField: UITextField {
         }
         
     }
-    override public func rightViewRect(forBounds bounds: CGRect) -> CGRect {
+    override open func rightViewRect(forBounds bounds: CGRect) -> CGRect {
         var rightViewRect = super.rightViewRect(forBounds: bounds)
         rightViewRect.origin.x -= 10;
         return rightViewRect
     }
-    public override func layoutSubviews() {
+    open override func layoutSubviews() {
         super.layoutSubviews()
         if isTitleEnabled && titleLabel.frame == .zero {
             titleLabel.font = titleFont

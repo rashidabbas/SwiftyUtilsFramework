@@ -8,13 +8,13 @@
 //
 import UIKit
 @IBDesignable
-public class CardView: UIViewX {
-    override public func setupViews() {
+open class CardView: UIViewX {
+    override open func setupViews() {
         super.setupViews()
         setupCardProperties()
     }
     
-    func setupCardProperties()  {
+    public func setupCardProperties()  {
         BorderWidth = 0.5
         FirstColor = .white
         SecondColor = .white

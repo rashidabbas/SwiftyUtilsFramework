@@ -8,7 +8,7 @@
 //
 import UIKit
 
-public class UIVisualEffectViewX: UIVisualEffectView {
+open class UIVisualEffectViewX: UIVisualEffectView {
 
     // MARK: - Border
     

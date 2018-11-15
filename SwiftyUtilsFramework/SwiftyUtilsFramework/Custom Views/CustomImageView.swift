@@ -9,7 +9,7 @@ import UIKit
 import AVFoundation
 
 let imageCache = NSCache<NSString, UIImage>()
-public class ThumbnailImageView: UIImageView {
+open class ThumbnailImageView: UIImageView {
     
     var imageUrlString: String?
     

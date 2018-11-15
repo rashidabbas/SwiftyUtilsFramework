@@ -8,9 +8,9 @@
 
 import UIKit
 @IBDesignable
-public class BaseView: UIView {
+open class BaseView: UIView {
 
-    override public func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         setupViews()
     }
@@ -19,7 +19,7 @@ public class BaseView: UIView {
 //        setupViews()
 //    }
 //
-   public func setupViews()  {
+   open func setupViews()  {
 
     }
 //

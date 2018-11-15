@@ -8,7 +8,7 @@
 //
 import UIKit
 @IBDesignable
-public class UIImageViewX: UIImageView {
+open class UIImageViewX: UIImageView {
     public var ShadowView: UIView!
     @IBInspectable public var BorderColor: UIColor = UIColor.clear{
         didSet{
@@ -52,7 +52,7 @@ public class UIImageViewX: UIImageView {
         }
     }
     
-    override public func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         self.clipsToBounds = true
         if ShadowView != nil {
@@ -69,7 +69,7 @@ public class UIImageViewX: UIImageView {
         self.superview?.bringSubviewToFront(self)
     }
     
-    override public func awakeFromNib() {
+    override open func awakeFromNib() {
         superview?.awakeFromNib()
         if PopIn {
             transform = CGAffineTransform(scaleX: 0.01, y: 0.01)

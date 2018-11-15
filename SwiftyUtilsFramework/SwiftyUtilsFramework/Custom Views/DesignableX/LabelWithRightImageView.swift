@@ -8,7 +8,7 @@
 //
 import UIKit
 
-public class LabelWithRightImageView: BaseView {
+open class LabelWithRightImageView: BaseView {
     
     let imageView: UIImageViewX = {
         let imageView = UIImageViewX()
@@ -22,7 +22,7 @@ public class LabelWithRightImageView: BaseView {
         return label
     }()
     
-    override public func setupViews() {
+    override open func setupViews() {
         super.setupViews()
         addSubview(imageView)
         addSubview(label)

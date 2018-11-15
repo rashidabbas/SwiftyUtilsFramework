@@ -7,7 +7,7 @@
 ////
 //
 import UIKit
-public class GradientLabel: UILabel {
+open class GradientLabel: UILabel {
 
     // MARK: - Colors to create gradient from
     @IBInspectable

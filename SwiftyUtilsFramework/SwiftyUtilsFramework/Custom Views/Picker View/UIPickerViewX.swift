@@ -11,7 +11,7 @@ public protocol PickerItemSelectionDelegate {
     func itemSelected(textField: UITextField, index: Int , value: PickerViewModel , cellIndex: IndexPath?)
 }
 
-public class UIPickerViewX: UIPickerView , UIPickerViewDataSource, UIPickerViewDelegate {
+open class UIPickerViewX: UIPickerView , UIPickerViewDataSource, UIPickerViewDelegate {
     
     public var itemSelectedDelegate: PickerItemSelectionDelegate?
     
@@ -85,7 +85,7 @@ public class UIPickerViewX: UIPickerView , UIPickerViewDataSource, UIPickerViewD
         pickerTextField?.resignFirstResponder()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     

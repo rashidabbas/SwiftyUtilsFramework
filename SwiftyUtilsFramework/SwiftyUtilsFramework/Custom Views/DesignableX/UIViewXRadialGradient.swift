@@ -9,12 +9,12 @@
 import UIKit
 
 @IBDesignable
-public class UIViewXRadialGradient: UIView {
+open class UIViewXRadialGradient: UIView {
     
     @IBInspectable public var InsideColor: UIColor = UIColor.clear
     @IBInspectable public var OutsideColor: UIColor = UIColor.clear
     
-    override public func draw(_ rect: CGRect) {
+    override open func draw(_ rect: CGRect) {
         let colors = [InsideColor.cgColor, OutsideColor.cgColor] as CFArray
         let endRadius = min(frame.width, frame.height) / 2
         let radialCenter = CGPoint(x: bounds.size.width / 2, y: bounds.size.height / 2)
