@@ -14,4 +14,7 @@ public class Service {
     public static func doSomething() -> String {
         return "Hello Swifty Utils Framework..."
     }
+    public static func doMore() {
+        print("Hi Framework man...")
+    }
 }
