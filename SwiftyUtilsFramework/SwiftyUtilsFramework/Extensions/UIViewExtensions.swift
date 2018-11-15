@@ -7,29 +7,27 @@
 //
 
 import UIKit
-extension UIView {
-    
-    
-    func addBackgroundImage(image: UIImage){
+public extension UIView {
+    public func addBackgroundImage(image: UIImage){
         let backgroundImage = UIImageView(frame: self.bounds)
         backgroundImage.image = image
         backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
         self.insertSubview(backgroundImage, at: 0)
     }
     
-    func removeConstraints() {
+    public func removeConstraints() {
         removeConstraints(constraints)
     }
     
-    func deactivateAllConstraints() {
+    public func deactivateAllConstraints() {
         NSLayoutConstraint.deactivate(getAllConstraints())
     }
     
-    func getAllSubviews() -> [UIView] {
+    public func getAllSubviews() -> [UIView] {
         return UIView.getAllSubviews(view: self)
     }
     
-    func getAllConstraints() -> [NSLayoutConstraint] {
+    public func getAllConstraints() -> [NSLayoutConstraint] {
         
         var subviewsConstraints = getAllSubviews().flatMap { (view) -> [NSLayoutConstraint] in
             return view.constraints
@@ -49,13 +47,13 @@ extension UIView {
         return subviewsConstraints + constraints
     }
     
-    class func getAllSubviews(view: UIView) -> [UIView] {
+    public class func getAllSubviews(view: UIView) -> [UIView] {
         return view.subviews.flatMap { subView -> [UIView] in
             return [subView] + getAllSubviews(view: subView)
         }
     }
     
-    func findLabel(withText text: String) -> UILabel? {
+    public func findLabel(withText text: String) -> UILabel? {
         if let label = self as? UILabel, label.text == text {
             return label
         }

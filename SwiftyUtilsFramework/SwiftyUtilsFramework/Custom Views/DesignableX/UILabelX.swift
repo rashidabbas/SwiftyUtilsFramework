@@ -9,25 +9,25 @@
 import UIKit
 extension UILabelX {
     @IBInspectable
-    var leftTextInset: CGFloat {
+    public var leftTextInset: CGFloat {
         set { textInsets.left = newValue }
         get { return textInsets.left }
     }
 
     @IBInspectable
-    var rightTextInset: CGFloat {
+    public var rightTextInset: CGFloat {
         set { textInsets.right = newValue }
         get { return textInsets.right }
     }
 
     @IBInspectable
-    var topTextInset: CGFloat {
+    public var topTextInset: CGFloat {
         set { textInsets.top = newValue }
         get { return textInsets.top }
     }
 
     @IBInspectable
-    var bottomTextInset: CGFloat {
+    public var bottomTextInset: CGFloat {
         set { textInsets.bottom = newValue }
         get { return textInsets.bottom }
     }
@@ -37,7 +37,7 @@ extension UILabelX {
 @IBDesignable
 class UILabelX: UILabel {
 
-    var textInsets = UIEdgeInsets.zero {
+    public var textInsets = UIEdgeInsets.zero {
         didSet { invalidateIntrinsicContentSize() }
     }
 
@@ -58,25 +58,25 @@ class UILabelX: UILabel {
 
 
 
-    @IBInspectable var cornerRadius: CGFloat = 0 {
+    @IBInspectable public var cornerRadius: CGFloat = 0 {
         didSet {
             self.layer.cornerRadius = cornerRadius
         }
     }
 
-    @IBInspectable var borderWidth: CGFloat = 0.0 {
+    @IBInspectable public var borderWidth: CGFloat = 0.0 {
         didSet {
             self.layer.borderWidth = borderWidth
         }
     }
 
-    @IBInspectable var BorderColor: UIColor = UIColor.clear {
+    @IBInspectable public var BorderColor: UIColor = UIColor.clear {
         didSet {
             self.layer.borderColor = BorderColor.cgColor
         }
     }
 
-    @IBInspectable var rotationAngle: CGFloat = 0 {
+    @IBInspectable public var rotationAngle: CGFloat = 0 {
         didSet {
             self.transform = CGAffineTransform(rotationAngle: rotationAngle * .pi / 180)
         }
@@ -112,7 +112,7 @@ class UILabelX: UILabel {
 
 
 
-    enum Direction {
+    public enum Direction {
 
         /// Draw the gradient from top to bottom.
         case vertical
@@ -150,7 +150,7 @@ class UILabelX: UILabel {
     }
 
     /// The CAGradientLayer instance containing the gradient information to play.
-    var gradientLayer: CAGradientLayer {
+    public var gradientLayer: CAGradientLayer {
         //swiftlint:disable force_cast
         return layer as! CAGradientLayer
         //swiftlint:enable force_cast
@@ -164,7 +164,7 @@ class UILabelX: UILabel {
     /// An array of UIColor objects defining the color of each gradient stop. Animatable.
     ///
     /// Defaults to nil.
-    var colors: [UIColor]? {
+    public var colors: [UIColor]? {
         didSet {
             gradientLayer.colors = colors?.map { $0.cgColor }
         }
@@ -176,7 +176,7 @@ class UILabelX: UILabel {
     /// The values must be monotonically increasing. If nil, the stops are spread uniformly across the range.
     ///
     /// Defaults to nil.
-    var locations: [Double]? {
+    public var locations: [Double]? {
         didSet {
             gradientLayer.locations = locations?.map(NSNumber.init(value:))
         }
@@ -187,7 +187,7 @@ class UILabelX: UILabel {
     /// Defaults to vertical:
     ///     - startPoint: (0.5, 0.0)
     ///     - endPoint:   (0.5, 1.0)
-    var direction: Direction {
+    public var direction: Direction {
         didSet {
             gradientLayer.startPoint = direction.startPoint
             gradientLayer.endPoint   = direction.endPoint

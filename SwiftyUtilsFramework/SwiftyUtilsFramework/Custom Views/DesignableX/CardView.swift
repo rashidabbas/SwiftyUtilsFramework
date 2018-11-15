@@ -8,13 +8,8 @@
 //
 import UIKit
 @IBDesignable
-class CardView: UIViewX {
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//        setupCardProperties()
-//    }
-
-    override func setupViews() {
+public class CardView: UIViewX {
+    override public func setupViews() {
         super.setupViews()
         setupCardProperties()
     }

@@ -7,10 +7,10 @@
 //
 
 import UIKit
-class RepeatingTimer {
-    let timeInterval: TimeInterval
+public class RepeatingTimer {
+    public let timeInterval: TimeInterval
     
-    init(timeInterval: TimeInterval) {
+    public init(timeInterval: TimeInterval) {
         self.timeInterval = timeInterval
     }
     
@@ -23,7 +23,7 @@ class RepeatingTimer {
         return t
     }()
     
-    var eventHandler: (() -> Void)?
+    public var eventHandler: (() -> Void)?
     
     private enum State {
         case suspended
@@ -43,7 +43,7 @@ class RepeatingTimer {
         eventHandler = nil
     }
     
-    func resume() {
+    public func resume() {
         if state == .resumed {
             return
         }
@@ -51,7 +51,7 @@ class RepeatingTimer {
         timer.resume()
     }
     
-    func suspend() {
+    public func suspend() {
         if state == .suspended {
             return
         }

@@ -8,7 +8,7 @@
 //
 import UIKit
 @IBDesignable
-class UIButtonX: UIButton {
+public class UIButtonX: UIButton {
     
     enum FromDirection: Int {
         case Top = 0
@@ -17,14 +17,14 @@ class UIButtonX: UIButton {
         case Left = 3
     }
     
-    var ShadowView: UIView!
+    public var ShadowView: UIView!
     var direction: FromDirection = .Left
-    var AlphaBefore: CGFloat = 1
-    static let buttonHeight: CGFloat = 45
+    public var AlphaBefore: CGFloat = 1
+    public static let buttonHeight: CGFloat = 45
     
-    @IBInspectable var Animate: Bool = false
-    @IBInspectable var AnimationDelay: Double = 0.2
-    @IBInspectable var AnimateFrom: Int{
+    @IBInspectable public var Animate: Bool = false
+    @IBInspectable public var AnimationDelay: Double = 0.2
+    @IBInspectable public var AnimateFrom: Int{
         get{
             return direction.rawValue
         }
@@ -32,11 +32,11 @@ class UIButtonX: UIButton {
             direction = FromDirection(rawValue: DirectionIndex) ?? .Left
         }
     }
-    @IBInspectable var PopIn: Bool = false
-    @IBInspectable var PopInDelay: Double = 0.4
+    @IBInspectable public var PopIn: Bool = false
+    @IBInspectable public var PopInDelay: Double = 0.4
     
     
-    override func draw(_ rect: CGRect) {
+    override public func draw(_ rect: CGRect) {
         self.clipsToBounds = true
         self.layer.cornerRadius = CornerRadious
         if Animate {
@@ -72,23 +72,23 @@ class UIButtonX: UIButton {
     
     
     //MARK: Shadow
-    @IBInspectable var ShadowColor: UIColor = UIColor.clear
-    @IBInspectable var ShadowRadious: CGFloat = 0
-    @IBInspectable var ShadowOppacity: CGFloat = 0
-    @IBInspectable var ShadowOffset: CGSize = CGSize(width: 0, height: 0)
+    @IBInspectable public var ShadowColor: UIColor = UIColor.clear
+    @IBInspectable public var ShadowRadious: CGFloat = 0
+    @IBInspectable public var ShadowOppacity: CGFloat = 0
+    @IBInspectable public var ShadowOffset: CGSize = CGSize(width: 0, height: 0)
     
     //MARK: Border
-    @IBInspectable var BorderColor: UIColor = UIColor.clear{
+    @IBInspectable public var BorderColor: UIColor = UIColor.clear{
         didSet{
             layer.borderColor = BorderColor.cgColor
         }
     }
-    @IBInspectable var BorderWidth: CGFloat = 0{
+    @IBInspectable public var BorderWidth: CGFloat = 0{
         didSet{
             layer.borderWidth = BorderWidth
         }
     }
-    @IBInspectable var CornerRadious: CGFloat = 10{
+    @IBInspectable public var CornerRadious: CGFloat = 10{
         didSet{
             layer.cornerRadius = CornerRadious
             layer.masksToBounds = CornerRadious > 0
@@ -96,37 +96,37 @@ class UIButtonX: UIButton {
     }
     
     
-    override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+    override public func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
 //        AlphaBefore = alpha
 //        UIView.animate(withDuration: 0.2, delay: 0, options: .allowUserInteraction, animations: {
 //            self.alpha = 0.4
 //        })
         return true
     }
-    override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
+    override public func endTracking(_ touch: UITouch?, with event: UIEvent?) {
 //        UIView.animate(withDuration: 0.3, delay: 0, options: .allowUserInteraction, animations: {
 //            self.alpha = self.AlphaBefore
 //        })
     }
     
     // MARK: Gradient
-    @IBInspectable var FirstColor: UIColor = UIColor.white{
+    @IBInspectable public var FirstColor: UIColor = UIColor.white{
         didSet{
             UpdateView()
         }
     }
-    @IBInspectable var SecondColor: UIColor = UIColor.white{
+    @IBInspectable public var SecondColor: UIColor = UIColor.white{
         didSet{
             UpdateView()
         }
     }
-    @IBInspectable var HorizontalGradient: Bool = false{
+    @IBInspectable public var HorizontalGradient: Bool = false{
         didSet{
             UpdateView()
         }
     }
     
-    override class var layerClass: AnyClass{
+    override public class var layerClass: AnyClass{
         get{
             return CAGradientLayer.self
         }

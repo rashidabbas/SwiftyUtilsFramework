@@ -9,11 +9,11 @@ import UIKit
 import AVFoundation
 
 let imageCache = NSCache<NSString, UIImage>()
-class ThumbnailImageView: UIImageView {
+public class ThumbnailImageView: UIImageView {
     
     var imageUrlString: String?
     
-    func loadThumbnailWithURL(urlString: String) {
+    public func loadThumbnailWithURL(urlString: String) {
         self.imageUrlString = urlString
         guard let url = URL(string: urlString) else { return }
         

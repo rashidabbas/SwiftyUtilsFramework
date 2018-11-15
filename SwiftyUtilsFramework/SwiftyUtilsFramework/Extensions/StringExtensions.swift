@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension String {
+public extension String {
     
     public func showToast() {
         UIApplication.shared.keyWindow?.makeToast(self)
@@ -36,11 +36,11 @@ extension String {
         return String(self[startIndex...])
     }
     
-    var stripped: String {
+    public var stripped: String {
         let okayChars = Set("1234567890+")
         return self.filter {okayChars.contains($0) }
     }
-    var strippedDigits: String {
+    public var strippedDigits: String {
         let okayChars = Set("1234567890")
         return self.filter {okayChars.contains($0) }
     }

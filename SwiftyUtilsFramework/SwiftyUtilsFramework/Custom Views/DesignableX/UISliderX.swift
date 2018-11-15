@@ -9,21 +9,21 @@
 import UIKit
 
 @IBDesignable
-class UISliderX: UISlider {
+public class UISliderX: UISlider {
 
-    @IBInspectable var thumbImage: UIImage? {
+    @IBInspectable public var thumbImage: UIImage? {
         didSet {
             setupView()
         }
     }
     
-    @IBInspectable var thumbHighlightedImage: UIImage? {
+    @IBInspectable public var thumbHighlightedImage: UIImage? {
         didSet {
             setupView()
         }
     }
     
-    func setupView() {
+    public func setupView() {
         setThumbImage(thumbImage, for: .normal)
         
         if let highlighted = thumbHighlightedImage {

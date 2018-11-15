@@ -7,13 +7,13 @@
 //
 
 import UIKit
-protocol PickerItemSelectionDelegate {
+public protocol PickerItemSelectionDelegate {
     func itemSelected(textField: UITextField, index: Int , value: PickerViewModel , cellIndex: IndexPath?)
 }
 
-class UIPickerViewX: UIPickerView , UIPickerViewDataSource, UIPickerViewDelegate {
+public class UIPickerViewX: UIPickerView , UIPickerViewDataSource, UIPickerViewDelegate {
     
-    var itemSelectedDelegate: PickerItemSelectionDelegate?
+    public var itemSelectedDelegate: PickerItemSelectionDelegate?
     
     private var pickOption: [PickerViewModel]!
     private var pickerTextField: TitleTextField?
@@ -89,15 +89,15 @@ class UIPickerViewX: UIPickerView , UIPickerViewDataSource, UIPickerViewDelegate
         fatalError("init(coder:) has not been implemented")
     }
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return pickOption.count
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickOption[row].title
     }
 }

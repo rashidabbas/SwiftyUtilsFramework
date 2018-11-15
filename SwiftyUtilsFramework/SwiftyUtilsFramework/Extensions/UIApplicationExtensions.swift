@@ -8,9 +8,9 @@
 
 import UIKit
 import UserNotifications
-extension UIApplication {
+public extension UIApplication {
     
-    var screenShot: UIImage?  {
+    public var screenShot: UIImage?  {
         
         if let rootViewController = keyWindow?.rootViewController {
             let scale = UIScreen.main.scale
@@ -26,19 +26,19 @@ extension UIApplication {
         return nil
     }
     
-    class var mainWindow: UIWindow? {
+    public class var mainWindow: UIWindow? {
         return UIApplication.shared.keyWindow
     }
     
-    func clearAllNotification() {
+    public func clearAllNotification() {
         let center = UNUserNotificationCenter.current()
         center.removeAllDeliveredNotifications()
     }
-    var statusBarView: UIView? {
+    public var statusBarView: UIView? {
         return value(forKey: "statusBar") as? UIView
     }
     
-    class var topViewController: UIViewController? {
+    public class var topViewController: UIViewController? {
         return getTopViewController()
     }
     
@@ -57,8 +57,8 @@ extension UIApplication {
         return base
     }
 }
-extension Equatable {
-    func share() {
+public extension Equatable {
+    public func share() {
         let activity = UIActivityViewController(activityItems: [self], applicationActivities: nil)
         UIApplication.topViewController?.present(activity, animated: true, completion: nil)
     }

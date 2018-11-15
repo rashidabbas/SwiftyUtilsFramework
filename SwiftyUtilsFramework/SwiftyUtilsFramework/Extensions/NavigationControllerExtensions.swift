@@ -8,8 +8,8 @@
 
 import UIKit
 
-extension UINavigationBar {
-    func shouldRemoveShadow(_ value: Bool) -> Void {
+public extension UINavigationBar {
+    public func shouldRemoveShadow(_ value: Bool) -> Void {
         if value {
             self.setValue(true, forKey: "hidesShadow")
         } else {
@@ -18,13 +18,8 @@ extension UINavigationBar {
     }
 }
 
-extension UINavigationController {
-    
-    override open var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
-    func backToViewController(vc: AnyClass) {
+public extension UINavigationController {
+    public func backToViewController(vc: AnyClass) {
         for element in viewControllers as Array {
             if element.isKind(of: vc) {
                 self.popToViewController(element, animated: true)

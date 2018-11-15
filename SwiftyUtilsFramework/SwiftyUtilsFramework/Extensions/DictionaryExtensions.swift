@@ -8,8 +8,8 @@
 
 import UIKit
 
-extension Dictionary {
-    func stringFromHttpParameters() -> String {
+public extension Dictionary {
+    public func stringFromHttpParameters() -> String {
         var parametersString = ""
         for (key, value) in self {
             if let key = key as? String,
@@ -21,9 +21,7 @@ extension Dictionary {
         parametersString = String(parametersString.prefix(upTo: lastIndex))
         return parametersString.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
     }
-    
-    
-    func queryItems() -> [URLQueryItem] {
+    public func queryItems() -> [URLQueryItem] {
         var queryItems = [URLQueryItem]()
         for (key , value) in self {
             if let key = key as? String,let value = value as? String {
@@ -33,7 +31,7 @@ extension Dictionary {
         return queryItems
     }
     
-    var json: String {
+    public var json: String {
         let invalidJson = "Not a valid JSON"
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: self, options: .prettyPrinted)
@@ -43,10 +41,8 @@ extension Dictionary {
         }
     }
     
-    func toJsonString() -> String {
+    public func toJsonString() -> String {
         return json
     }
-    
-    
 }
 

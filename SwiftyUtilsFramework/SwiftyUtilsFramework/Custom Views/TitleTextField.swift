@@ -8,29 +8,29 @@
 
 import UIKit
 
-open class TitleTextField: UITextField {
+public class TitleTextField: UITextField {
     
     fileprivate var titleLabel: UILabel!
-    var titleHeight: CGFloat = 27
+    public var titleHeight: CGFloat = 27
     
-    var stringTag = ""
-    var title: String = "" {
+    public var stringTag = ""
+    public var title: String = "" {
         didSet{
             titleLabel.text = title
         }
     }
-    var titleFont: UIFont = UIFont.systemFont(ofSize: 16) {
+    public var titleFont: UIFont = UIFont.systemFont(ofSize: 16) {
         didSet{
             titleLabel.font = titleFont
         }
     }
-    var titleColor: UIColor = .lightGray {
+    public var titleColor: UIColor = .lightGray {
         didSet{
             titleLabel.textColor = titleColor
         }
     }
     
-    var showDropDownArrow: Bool = false {
+    public var showDropDownArrow: Bool = false {
         didSet{
             if showDropDownArrow {
                 let img = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
@@ -41,7 +41,7 @@ open class TitleTextField: UITextField {
         }
     }
     
-    var isTitleEnabled = true
+    public var isTitleEnabled = true
     
     
     public override init(frame: CGRect) {
@@ -53,12 +53,12 @@ open class TitleTextField: UITextField {
         }
         
     }
-    override open func rightViewRect(forBounds bounds: CGRect) -> CGRect {
+    override public func rightViewRect(forBounds bounds: CGRect) -> CGRect {
         var rightViewRect = super.rightViewRect(forBounds: bounds)
         rightViewRect.origin.x -= 10;
         return rightViewRect
     }
-    open override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         if isTitleEnabled && titleLabel.frame == .zero {
             titleLabel.font = titleFont

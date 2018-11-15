@@ -12,8 +12,8 @@ import MessageUI
 import UserNotifications
 import AVKit
 import Photos
-extension UIViewController {
-    func requestMicrophone(completion: @escaping (Bool) -> ()) {
+public extension UIViewController {
+    public func requestMicrophone(completion: @escaping (Bool) -> ()) {
         AVAudioSession.sharedInstance().requestRecordPermission {(granted: Bool)-> Void in
             print("Permission = \(granted)")
             DispatchQueue.main.async {
@@ -21,7 +21,7 @@ extension UIViewController {
             }
         }
     }
-    func registerForPushNotifications(completion: @escaping (Bool) -> ())  {
+    public func registerForPushNotifications(completion: @escaping (Bool) -> ())  {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert ,  .sound , .badge]) { (success, error) in
             DispatchQueue.main.async {
                 if success {
@@ -34,7 +34,7 @@ extension UIViewController {
             }
         }
     }
-    func checkPhotoLibraryPermission(completion: @escaping (Bool) -> ()) {
+    public func checkPhotoLibraryPermission(completion: @escaping (Bool) -> ()) {
         PHPhotoLibrary.requestAuthorization { (status) in
             switch status {
             case .authorized:
@@ -50,7 +50,7 @@ extension UIViewController {
             }
         }
     }
-    func requestForContactsAccess(completionHandler: @escaping (_ accessGranted: Bool) -> Void) {
+    public func requestForContactsAccess(completionHandler: @escaping (_ accessGranted: Bool) -> Void) {
         let authorizationStatus = CNContactStore.authorizationStatus(for: CNEntityType.contacts)
         let store = CNContactStore()
         switch authorizationStatus {
@@ -74,7 +74,7 @@ extension UIViewController {
             }
         }
     }
-    func sendTextMessage(number: [String] , message: String , delegate: MFMessageComposeViewControllerDelegate)  {
+    public func sendTextMessage(number: [String] , message: String , delegate: MFMessageComposeViewControllerDelegate)  {
         if MFMessageComposeViewController.canSendText() {
             let composeVC = MFMessageComposeViewController()
             composeVC.messageComposeDelegate = delegate
@@ -86,7 +86,7 @@ extension UIViewController {
         }
     }
     
-    func showAlert(title: String = "" , message: String = "" , onOkClick: @escaping (() -> ()) = {})  {
+    public func showAlert(title: String = "" , message: String = "" , onOkClick: @escaping (() -> ()) = {})  {
         DispatchQueue.main.async {
             let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
@@ -96,7 +96,7 @@ extension UIViewController {
         }
     }
     
-    func showConfirmationAlert(title: String = "" , message: String = "" , okTitle: String = "Submit" , cancelTitle: String = "Cancel", okClick: @escaping () -> () , cancelClick: @escaping () -> ())  {
+    public func showConfirmationAlert(title: String = "" , message: String = "" , okTitle: String = "Submit" , cancelTitle: String = "Cancel", okClick: @escaping () -> () , cancelClick: @escaping () -> ())  {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: okTitle, style: .default, handler: { (action) in
             okClick()
@@ -108,14 +108,14 @@ extension UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
-    func showAPIErrorAlert(title: String = "Error", message: String = "Something went wrong please try again." , okClick: @escaping () -> () , cancelClick: @escaping () -> ())  {
+    public func showAPIErrorAlert(title: String = "Error", message: String = "Something went wrong please try again." , okClick: @escaping () -> () , cancelClick: @escaping () -> ())  {
         showConfirmationAlert(title: title, message: message, okTitle: "Try Again", cancelTitle: "cancel", okClick: {
             okClick()
         }, cancelClick: {
             cancelClick()
         })
     }
-    func playVideo(url: URL) {
+    public func playVideo(url: URL) {
         print(url)
         let player = AVPlayer(url: url)
         let vc = AVPlayerViewController()
@@ -126,13 +126,13 @@ extension UIViewController {
         }
     }
     
-    func showListItemPicker(with cellIndexPath: IndexPath? = nil, title: String , textfield: TitleTextField , view: UIView , items: [PickerViewModel] , delegate: PickerItemSelectionDelegate) -> UIPickerViewX {
+    public func showListItemPicker(with cellIndexPath: IndexPath? = nil, title: String , textfield: TitleTextField , view: UIView , items: [PickerViewModel] , delegate: PickerItemSelectionDelegate) -> UIPickerViewX {
         let pickerView = UIPickerViewX(with: cellIndexPath , title: title, textfield: textfield, view: view, items: items)
         pickerView.itemSelectedDelegate = delegate
         return pickerView
     }
     
-    func showDatePicker(title: String = "" , datepickerMode: UIDatePicker.Mode = .dateAndTime , dateformat: DateFormatter , onDateSelection: @escaping (String) -> ())  {
+    public func showDatePicker(title: String = "" , datepickerMode: UIDatePicker.Mode = .dateAndTime , dateformat: DateFormatter , onDateSelection: @escaping (String) -> ())  {
         let datePicker = UIDatePicker(frame: .zero)
         datePicker.backgroundColor = UIColor.clear
         datePicker.datePickerMode = datepickerMode

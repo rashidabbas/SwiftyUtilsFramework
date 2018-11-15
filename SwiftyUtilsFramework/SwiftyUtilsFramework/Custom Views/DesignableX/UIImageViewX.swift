@@ -8,51 +8,51 @@
 //
 import UIKit
 @IBDesignable
-class UIImageViewX: UIImageView {
-    var ShadowView: UIView!
-    @IBInspectable var BorderColor: UIColor = UIColor.clear{
+public class UIImageViewX: UIImageView {
+    public var ShadowView: UIView!
+    @IBInspectable public var BorderColor: UIColor = UIColor.clear{
         didSet{
             layer.borderColor = BorderColor.cgColor
         }
     }
-    @IBInspectable var BorderWidth: CGFloat = 0{
+    @IBInspectable public var BorderWidth: CGFloat = 0{
         didSet{
             layer.borderWidth = BorderWidth
         }
     }
-    @IBInspectable var CornerRadious: CGFloat = 0{
+    @IBInspectable public var CornerRadious: CGFloat = 0{
         didSet{
             clipsToBounds = true
             layer.cornerRadius = CornerRadious
         }
     }
-    @IBInspectable var PopIn: Bool = false
-    @IBInspectable var PopInDuration: Double = 0.4
-    @IBInspectable var PopInDelay: Double = 0
-    @IBInspectable var PulseDelay: Double = 0
+    @IBInspectable public var PopIn: Bool = false
+    @IBInspectable public var PopInDuration: Double = 0.4
+    @IBInspectable public var PopInDelay: Double = 0
+    @IBInspectable public var PulseDelay: Double = 0
     //MARK: Shadow
-    @IBInspectable var ShadowColor: UIColor = UIColor.clear{
+    @IBInspectable public var ShadowColor: UIColor = UIColor.clear{
         didSet{
             layoutSubviews()
         }
     }
-    @IBInspectable var ShadowRadious: CGFloat = 0{
+    @IBInspectable public var ShadowRadious: CGFloat = 0{
         didSet{
             layoutSubviews()
         }
     }
-    @IBInspectable var ShadowOppacity: CGFloat = 0{
+    @IBInspectable public var ShadowOppacity: CGFloat = 0{
         didSet{
             layoutSubviews()
         }
     }
-    @IBInspectable var ShadowOffset: CGSize = CGSize(width: 0, height: 0){
+    @IBInspectable public var ShadowOffset: CGSize = CGSize(width: 0, height: 0){
         didSet{
             layoutSubviews()
         }
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         self.clipsToBounds = true
         if ShadowView != nil {
@@ -69,7 +69,7 @@ class UIImageViewX: UIImageView {
         self.superview?.bringSubviewToFront(self)
     }
     
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         superview?.awakeFromNib()
         if PopIn {
             transform = CGAffineTransform(scaleX: 0.01, y: 0.01)

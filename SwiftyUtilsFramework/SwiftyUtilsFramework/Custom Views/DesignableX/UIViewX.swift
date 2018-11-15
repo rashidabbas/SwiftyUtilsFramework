@@ -9,29 +9,29 @@
 import UIKit
 
 @IBDesignable
-class UIViewX: BaseView {
+public class UIViewX: BaseView {
     
-    override func setupViews() {
+    override public func setupViews() {
         super.setupViews()
     }
     
     //MARK: Gradient
-    @IBInspectable var FirstColor: UIColor = UIColor.white{
+    @IBInspectable public var FirstColor: UIColor = UIColor.white{
         didSet{
             UpdateView()
         }
     }
-    @IBInspectable var SecondColor: UIColor = UIColor.white{
+    @IBInspectable public var SecondColor: UIColor = UIColor.white{
         didSet{
             UpdateView()
         }
     }
-    @IBInspectable var HorizontalGradient: Bool = false{
+    @IBInspectable public var HorizontalGradient: Bool = false{
         didSet{
             UpdateView()
         }
     }
-    override class var layerClass: AnyClass{
+    override public class var layerClass: AnyClass{
         get{
             return CAGradientLayer.self
         }
@@ -52,44 +52,44 @@ class UIViewX: BaseView {
     
     //MARK: Border
     
-    @IBInspectable var BorderColor: UIColor = UIColor.clear{
+    @IBInspectable public var BorderColor: UIColor = UIColor.clear{
         didSet{
             layer.borderColor = BorderColor.cgColor
         }
     }
-    @IBInspectable var BorderWidth: CGFloat = 0{
+    @IBInspectable public var BorderWidth: CGFloat = 0{
         didSet{
             layer.borderWidth = BorderWidth
         }
     }
-    @IBInspectable var CornerRadious: CGFloat = 0{
+    @IBInspectable public var CornerRadious: CGFloat = 0{
         didSet{
             layer.cornerRadius = CornerRadious
         }
     }
     
     //MARK: Shadows
-    @IBInspectable var ShadowColor: UIColor = UIColor.clear{
+    @IBInspectable public var ShadowColor: UIColor = UIColor.clear{
         didSet{
             layer.shadowColor = ShadowColor.cgColor
         }
     }
-    @IBInspectable var ShadowOpacity: CGFloat = 0{
+    @IBInspectable public var ShadowOpacity: CGFloat = 0{
         didSet{
             layer.shadowOpacity = Float(ShadowOpacity)
         }
     }
-    @IBInspectable var ShadowRadious: CGFloat = 0{
+    @IBInspectable public var ShadowRadious: CGFloat = 0{
         didSet{
             layer.shadowRadius = ShadowRadious
         }
     }
-    @IBInspectable var ShadowOffsetY: CGFloat = 0{
+    @IBInspectable public var ShadowOffsetY: CGFloat = 0{
         didSet{
             layer.shadowOffset.height = ShadowOffsetY
         }
     }
-    @IBInspectable var ShadowOffsetX: CGFloat = 0{
+    @IBInspectable public var ShadowOffsetX: CGFloat = 0{
         didSet{
             layer.shadowOffset.width = ShadowOffsetX
         }

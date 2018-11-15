@@ -8,18 +8,17 @@
 
 import UIKit
 
-extension Data
-{
-    func toString() -> String
+public extension Data {
+    public func toString() -> String
     {
         return String(data: self, encoding: .utf8)!
     }
     
-    func printData() {
+    public func printData() {
         print("API RESULT***=\(self.toString())")
     }
     
-    func decode<T>(type: T.Type , result: (T) -> () , fail: (String) -> ()) where T: Decodable {
+    public func decode<T>(type: T.Type , result: (T) -> () , fail: (String) -> ()) where T: Decodable {
         do {
             result(try JSONDecoder().decode(type, from: self))
         } catch {

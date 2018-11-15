@@ -8,34 +8,34 @@
 //
 import UIKit
 @IBDesignable
-class UITextFieldX: UITextField {
+public class UITextFieldX: UITextField {
     
-    @IBInspectable var leftImage: UIImage? {
+    @IBInspectable public var leftImage: UIImage? {
         didSet {
             updateView()
         }
     }
     
-    @IBInspectable var leftPadding: CGFloat = 0 {
+    @IBInspectable public var leftPadding: CGFloat = 0 {
         didSet {
             updateView()
         }
     }
     
-    @IBInspectable var rightImage: UIImage? {
+    @IBInspectable public var rightImage: UIImage? {
         didSet {
             updateView()
         }
     }
     
-    @IBInspectable var rightPadding: CGFloat = 0 {
+    @IBInspectable public var rightPadding: CGFloat = 0 {
         didSet {
             updateView()
         }
     }
     
     private var _isRightViewVisible: Bool = true
-    var isRightViewVisible: Bool {
+    public var isRightViewVisible: Bool {
         get {
             return _isRightViewVisible
         }
@@ -45,15 +45,15 @@ class UITextFieldX: UITextField {
         }
     }
     
-   static let height: CGFloat = 40
+   public static let height: CGFloat = 40
     
-    @IBInspectable var placeHolderColor: UIColor = UIColor.white {
+    @IBInspectable public var placeHolderColor: UIColor = UIColor.white {
         didSet {
             updateView()
         }
     }
     
-    func updateView() {
+    public func updateView() {
         setLeftImage()
         setRightImage()
         
@@ -69,7 +69,7 @@ class UITextFieldX: UITextField {
         
     }
     
-    func setLeftImage() {
+    public func setLeftImage() {
         leftViewMode = UITextField.ViewMode.always
         var view: UIView
         
@@ -94,7 +94,7 @@ class UITextFieldX: UITextField {
         leftView = view
     }
     
-    func setRightImage() {
+    public func setRightImage() {
         rightViewMode = UITextField.ViewMode.always
         
         var view: UIView
@@ -123,7 +123,7 @@ class UITextFieldX: UITextField {
     
     
     // MARK: - Corner Radius
-    @IBInspectable var cornerRadius: CGFloat = 0 {
+    @IBInspectable public var cornerRadius: CGFloat = 0 {
         didSet {
             self.layer.cornerRadius = cornerRadius
         }

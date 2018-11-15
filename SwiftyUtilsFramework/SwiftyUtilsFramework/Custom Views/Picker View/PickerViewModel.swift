@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct PickerViewModel {
+public struct PickerViewModel {
     let title: String
     let id: String
 }

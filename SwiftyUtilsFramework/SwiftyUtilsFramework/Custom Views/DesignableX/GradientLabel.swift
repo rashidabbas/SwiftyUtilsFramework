@@ -7,17 +7,17 @@
 ////
 //
 import UIKit
-class GradientLabel: UILabel {
+public class GradientLabel: UILabel {
 
     // MARK: - Colors to create gradient from
     @IBInspectable
-    open var gradientFrom: UIColor? {
+    public var gradientFrom: UIColor? {
         didSet {
             updateGradientTextColor()
         }
     }
     @IBInspectable
-    open var gradientTo: UIColor? {
+    public var gradientTo: UIColor? {
         didSet {
             updateGradientTextColor()
         }
