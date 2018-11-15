@@ -15,6 +15,6 @@ public class Service {
         return "Hello Swifty Utils Framework..."
     }
     public static func doMore() {
-        print("Hi Framework man...")
+        print("Hi Framework man... new function")
     }
 }
