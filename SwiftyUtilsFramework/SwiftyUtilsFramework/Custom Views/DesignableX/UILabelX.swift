@@ -112,63 +112,63 @@ open class UILabelX: UILabel {
 
 
 
-    public enum Direction {
-
-        /// Draw the gradient from top to bottom.
-        case vertical
-
-        /// Draw the gradient from left to right.
-        case horizontal
-
-        // Draw the gradient in a custom direction providing the start and end points.
-        case custom(start: CGPoint, end: CGPoint)
-
-        /// The start point of the gradient when drawn.
-        var startPoint: CGPoint {
-            switch self {
-            case .vertical:
-                return CGPoint(x: 0.5, y: 0)
-            case .horizontal:
-                return CGPoint(x: 0, y: 0.5)
-            case .custom(start: let start, end: _):
-                return start
-            }
-        }
-
-        /// The end point of the gradient when drawn.
-        var endPoint: CGPoint {
-            switch self {
-            case .vertical:
-                return CGPoint(x: 0.5, y: 1)
-            case .horizontal:
-                return CGPoint(x: 1, y: 0.5)
-            case .custom(start: _, end: let end):
-                return end
-            }
-        }
-
-    }
+//    public enum Direction {
+//
+//        /// Draw the gradient from top to bottom.
+//        case vertical
+//
+//        /// Draw the gradient from left to right.
+//        case horizontal
+//
+//        // Draw the gradient in a custom direction providing the start and end points.
+//        case custom(start: CGPoint, end: CGPoint)
+//
+//        /// The start point of the gradient when drawn.
+//        var startPoint: CGPoint {
+//            switch self {
+//            case .vertical:
+//                return CGPoint(x: 0.5, y: 0)
+//            case .horizontal:
+//                return CGPoint(x: 0, y: 0.5)
+//            case .custom(start: let start, end: _):
+//                return start
+//            }
+//        }
+//
+//        /// The end point of the gradient when drawn.
+//        var endPoint: CGPoint {
+//            switch self {
+//            case .vertical:
+//                return CGPoint(x: 0.5, y: 1)
+//            case .horizontal:
+//                return CGPoint(x: 1, y: 0.5)
+//            case .custom(start: _, end: let end):
+//                return end
+//            }
+//        }
+//
+//    }
 
     /// The CAGradientLayer instance containing the gradient information to play.
-    public var gradientLayer: CAGradientLayer {
-        //swiftlint:disable force_cast
-        return layer as! CAGradientLayer
-        //swiftlint:enable force_cast
-    }
+//    public var gradientLayer: CAGradientLayer {
+//        //swiftlint:disable force_cast
+//        return layer as! CAGradientLayer
+//        //swiftlint:enable force_cast
+//    }
 
     // Override UIView property. The class used to create the layer for instances of this class.
-    override open static var layerClass: AnyClass {
-        return CAGradientLayer.self
-    }
+//    override public static var layerClass: AnyClass {
+//        return CAGradientLayer.self
+//    }
 
     /// An array of UIColor objects defining the color of each gradient stop. Animatable.
     ///
     /// Defaults to nil.
-    public var colors: [UIColor]? {
-        didSet {
-            gradientLayer.colors = colors?.map { $0.cgColor }
-        }
-    }
+//    public var colors: [UIColor]? {
+//        didSet {
+//            gradientLayer.colors = colors?.map { $0.cgColor }
+//        }
+//    }
 
     /// An optional array of Double objects defining the location of each gradient stop. Animatable.
     ///
@@ -176,30 +176,30 @@ open class UILabelX: UILabel {
     /// The values must be monotonically increasing. If nil, the stops are spread uniformly across the range.
     ///
     /// Defaults to nil.
-    public var locations: [Double]? {
-        didSet {
-            gradientLayer.locations = locations?.map(NSNumber.init(value:))
-        }
-    }
+//    public var locations: [Double]? {
+//        didSet {
+//            gradientLayer.locations = locations?.map(NSNumber.init(value:))
+//        }
+//    }
 
     /// The direction to draw the gradient. Animatable.
     ///
     /// Defaults to vertical:
     ///     - startPoint: (0.5, 0.0)
     ///     - endPoint:   (0.5, 1.0)
-    public var direction: Direction {
-        didSet {
-            gradientLayer.startPoint = direction.startPoint
-            gradientLayer.endPoint   = direction.endPoint
-        }
-    }
+//    public var direction: Direction {
+//        didSet {
+//            gradientLayer.startPoint = direction.startPoint
+//            gradientLayer.endPoint   = direction.endPoint
+//        }
+//    }
 
     /// Initialise with default values calling didSet to update the underlying gradient layer in the process.
     override init(frame: CGRect) {
 
-        self.colors    = nil
-        self.direction = .vertical
-        self.locations = nil
+//        self.colors    = nil
+//        self.direction = .vertical
+//        self.locations = nil
 
         super.init(frame: frame)
 
