@@ -31,7 +31,6 @@
 		1D250EF1219D8ECF00FA21CE /* UIView+VisibleGone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D250EF0219D8ECF00FA21CE /* UIView+VisibleGone.swift */; };
 		1D250EF3219D8F4300FA21CE /* SwiftyOverLays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D250EF2219D8F4300FA21CE /* SwiftyOverLays.swift */; };
 		1D250F03219D909900FA21CE /* UIImageViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D250EF5219D909700FA21CE /* UIImageViewX.swift */; };
-		1D250F04219D909900FA21CE /* UILabelX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D250EF6219D909700FA21CE /* UILabelX.swift */; };
 		1D250F05219D909900FA21CE /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D250EF7219D909700FA21CE /* BaseView.swift */; };
 		1D250F06219D909900FA21CE /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D250EF8219D909800FA21CE /* UIViewX.swift */; };
 		1D250F07219D909900FA21CE /* GradientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D250EF9219D909800FA21CE /* GradientLabel.swift */; };
@@ -83,7 +82,6 @@
 		1D250EF0219D8ECF00FA21CE /* UIView+VisibleGone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+VisibleGone.swift"; sourceTree = "<group>"; };
 		1D250EF2219D8F4300FA21CE /* SwiftyOverLays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyOverLays.swift; sourceTree = "<group>"; };
 		1D250EF5219D909700FA21CE /* UIImageViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewX.swift; sourceTree = "<group>"; };
-		1D250EF6219D909700FA21CE /* UILabelX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelX.swift; sourceTree = "<group>"; };
 		1D250EF7219D909700FA21CE /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		1D250EF8219D909800FA21CE /* UIViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
 		1D250EF9219D909800FA21CE /* GradientLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientLabel.swift; sourceTree = "<group>"; };
@@ -218,7 +216,6 @@
 				1D250F01219D909900FA21CE /* LabelWithRightImageView.swift */,
 				1D250F02219D909900FA21CE /* UIButtonX.swift */,
 				1D250EF5219D909700FA21CE /* UIImageViewX.swift */,
-				1D250EF6219D909700FA21CE /* UILabelX.swift */,
 				1D250EFD219D909800FA21CE /* UISliderX.swift */,
 				1D250EFF219D909900FA21CE /* UITextFieldX.swift */,
 				1D250EF8219D909800FA21CE /* UIViewX.swift */,
@@ -341,7 +338,6 @@
 				1D250F09219D909900FA21CE /* CardView.swift in Sources */,
 				1D250F05219D909900FA21CE /* BaseView.swift in Sources */,
 				1D250EF1219D8ECF00FA21CE /* UIView+VisibleGone.swift in Sources */,
-				1D250F04219D909900FA21CE /* UILabelX.swift in Sources */,
 				1D250EE0219D88A300FA21CE /* DictionaryExtensions.swift in Sources */,
 				1D250F27219DD03D00FA21CE /* Attribute.swift in Sources */,
 				1D250EEE219D8DC000FA21CE /* URLExtensions.swift in Sources */,
