@@ -16,8 +16,8 @@ open class LabelWithRightImageView: BaseView {
         return imageView
     }()
     
-    let label: UILabelX = {
-        let label = UILabelX()
+    let label: UILabel = {
+        let label = UILabel()
         label.text = ""
         return label
     }()
