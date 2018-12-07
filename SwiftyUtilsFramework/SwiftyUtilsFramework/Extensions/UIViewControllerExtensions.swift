@@ -152,4 +152,22 @@ public extension UIViewController {
         
         self.present(alert, animated: true, completion: nil)
     }
+    
+    func topMostViewController() -> UIViewController? {
+        if self.presentedViewController == nil {
+            return self
+        }
+        if let navigation = self.presentedViewController as? UINavigationController {
+            print("Oh Yes Nav Controller")
+            return navigation.visibleViewController?.topMostViewController()
+        }
+        if let tab = self.presentedViewController as? UITabBarController {
+            print("Oh Yes Tab bar Controller")
+            if let selectedTab = tab.selectedViewController {
+                return selectedTab.topMostViewController()
+            }
+            return tab.topMostViewController()
+        }
+        return self.presentedViewController!.topMostViewController()
+    }
 }

@@ -18,6 +18,7 @@ public extension UITextField {
     }
     
     public func leftImage(image: UIImage) {
+        leftViewMode = .always
         let lv = UIImageView()
         lv.image = image
         leftView = lv

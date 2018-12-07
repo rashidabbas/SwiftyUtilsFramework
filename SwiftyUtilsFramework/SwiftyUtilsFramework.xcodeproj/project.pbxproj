@@ -53,6 +53,18 @@
 		1D250F27219DD03D00FA21CE /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D250F1C219DD03C00FA21CE /* Attribute.swift */; };
 		1D250F28219DD03D00FA21CE /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D250F1D219DD03C00FA21CE /* Operators.swift */; };
 		1D250F29219DD03D00FA21CE /* WritingDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D250F1E219DD03C00FA21CE /* WritingDirection.swift */; };
+		1DA2482221BAE0B700009E03 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA2481921BAE0B700009E03 /* PasswordTextField.swift */; };
+		1DA2482321BAE0B700009E03 /* SecureTextToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA2481A21BAE0B700009E03 /* SecureTextToggleButton.swift */; };
+		1DA2482421BAE0B700009E03 /* visibility_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA2481C21BAE0B700009E03 /* visibility_off@2x.png */; };
+		1DA2482521BAE0B700009E03 /* visibility_off@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA2481D21BAE0B700009E03 /* visibility_off@3x.png */; };
+		1DA2482621BAE0B700009E03 /* visibility_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA2481E21BAE0B700009E03 /* visibility_on.png */; };
+		1DA2482721BAE0B700009E03 /* visibility_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA2481F21BAE0B700009E03 /* visibility_off.png */; };
+		1DA2482821BAE0B700009E03 /* visibility_on@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA2482021BAE0B700009E03 /* visibility_on@3x.png */; };
+		1DA2482921BAE0B700009E03 /* visibility_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA2482121BAE0B700009E03 /* visibility_on@2x.png */; };
+		1DA2483721BAE25D00009E03 /* FloatRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA2483621BAE25D00009E03 /* FloatRatingView.swift */; };
+		1DA2483A21BAE2B200009E03 /* UICheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA2483921BAE2B200009E03 /* UICheckbox.swift */; };
+		1DA2483C21BAE2F900009E03 /* tick.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA2483B21BAE2F900009E03 /* tick.png */; };
+		1DA2483E21BAE3C900009E03 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA2483D21BAE3C900009E03 /* ArrayExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +116,18 @@
 		1D250F1C219DD03C00FA21CE /* Attribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attribute.swift; sourceTree = "<group>"; };
 		1D250F1D219DD03C00FA21CE /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		1D250F1E219DD03C00FA21CE /* WritingDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingDirection.swift; sourceTree = "<group>"; };
+		1DA2481921BAE0B700009E03 /* PasswordTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
+		1DA2481A21BAE0B700009E03 /* SecureTextToggleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureTextToggleButton.swift; sourceTree = "<group>"; };
+		1DA2481C21BAE0B700009E03 /* visibility_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "visibility_off@2x.png"; sourceTree = "<group>"; };
+		1DA2481D21BAE0B700009E03 /* visibility_off@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "visibility_off@3x.png"; sourceTree = "<group>"; };
+		1DA2481E21BAE0B700009E03 /* visibility_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = visibility_on.png; sourceTree = "<group>"; };
+		1DA2481F21BAE0B700009E03 /* visibility_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = visibility_off.png; sourceTree = "<group>"; };
+		1DA2482021BAE0B700009E03 /* visibility_on@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "visibility_on@3x.png"; sourceTree = "<group>"; };
+		1DA2482121BAE0B700009E03 /* visibility_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "visibility_on@2x.png"; sourceTree = "<group>"; };
+		1DA2483621BAE25D00009E03 /* FloatRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatRatingView.swift; sourceTree = "<group>"; };
+		1DA2483921BAE2B200009E03 /* UICheckbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICheckbox.swift; sourceTree = "<group>"; };
+		1DA2483B21BAE2F900009E03 /* tick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tick.png; sourceTree = "<group>"; };
+		1DA2483D21BAE3C900009E03 /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +197,7 @@
 				1D250EE7219D8ACB00FA21CE /* UIColorExtensions.swift */,
 				1D250EE9219D8C6C00FA21CE /* UIApplicationExtensions.swift */,
 				1D250EED219D8DC000FA21CE /* URLExtensions.swift */,
+				1DA2483D21BAE3C900009E03 /* ArrayExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -180,6 +205,9 @@
 		1D250ED1219D778A00FA21CE /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				1DA2483821BAE2B200009E03 /* Check Box */,
+				1DA2483521BAE25D00009E03 /* Rating Bar */,
+				1DA2481821BAE0B700009E03 /* PasswordTextField */,
 				1D250EF4219D908000FA21CE /* DesignableX */,
 				1D250EDA219D84F900FA21CE /* Picker View */,
 				1D250ED2219D779E00FA21CE /* Toast.swift */,
@@ -241,6 +269,46 @@
 				1D250F1E219DD03C00FA21CE /* WritingDirection.swift */,
 			);
 			path = SwiftyAttributedStrings;
+			sourceTree = "<group>";
+		};
+		1DA2481821BAE0B700009E03 /* PasswordTextField */ = {
+			isa = PBXGroup;
+			children = (
+				1DA2481921BAE0B700009E03 /* PasswordTextField.swift */,
+				1DA2481A21BAE0B700009E03 /* SecureTextToggleButton.swift */,
+				1DA2481B21BAE0B700009E03 /* Media */,
+			);
+			path = PasswordTextField;
+			sourceTree = "<group>";
+		};
+		1DA2481B21BAE0B700009E03 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				1DA2481C21BAE0B700009E03 /* visibility_off@2x.png */,
+				1DA2481D21BAE0B700009E03 /* visibility_off@3x.png */,
+				1DA2481E21BAE0B700009E03 /* visibility_on.png */,
+				1DA2481F21BAE0B700009E03 /* visibility_off.png */,
+				1DA2482021BAE0B700009E03 /* visibility_on@3x.png */,
+				1DA2482121BAE0B700009E03 /* visibility_on@2x.png */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
+		1DA2483521BAE25D00009E03 /* Rating Bar */ = {
+			isa = PBXGroup;
+			children = (
+				1DA2483621BAE25D00009E03 /* FloatRatingView.swift */,
+			);
+			path = "Rating Bar";
+			sourceTree = "<group>";
+		};
+		1DA2483821BAE2B200009E03 /* Check Box */ = {
+			isa = PBXGroup;
+			children = (
+				1DA2483B21BAE2F900009E03 /* tick.png */,
+				1DA2483921BAE2B200009E03 /* UICheckbox.swift */,
+			);
+			path = "Check Box";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +380,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DA2482421BAE0B700009E03 /* visibility_off@2x.png in Resources */,
+				1DA2482821BAE0B700009E03 /* visibility_on@3x.png in Resources */,
+				1DA2482521BAE0B700009E03 /* visibility_off@3x.png in Resources */,
+				1DA2482621BAE0B700009E03 /* visibility_on.png in Resources */,
+				1DA2483C21BAE2F900009E03 /* tick.png in Resources */,
+				1DA2482721BAE0B700009E03 /* visibility_off.png in Resources */,
+				1DA2482921BAE0B700009E03 /* visibility_on@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,7 +402,9 @@
 				1D250EE2219D88EC00FA21CE /* DataExtensions.swift in Sources */,
 				1D250F03219D909900FA21CE /* UIImageViewX.swift in Sources */,
 				1D250F25219DD03D00FA21CE /* NSAttributedString+SwiftyAttributes.swift in Sources */,
+				1DA2483A21BAE2B200009E03 /* UICheckbox.swift in Sources */,
 				1D250EE4219D898200FA21CE /* NavigationControllerExtensions.swift in Sources */,
+				1DA2483721BAE25D00009E03 /* FloatRatingView.swift in Sources */,
 				1D250F24219DD03D00FA21CE /* Attribute+Sequence.swift in Sources */,
 				1D250EF3219D8F4300FA21CE /* SwiftyOverLays.swift in Sources */,
 				1D250F0D219D909900FA21CE /* UITextFieldX.swift in Sources */,
@@ -351,12 +428,15 @@
 				1D250ECA219D729200FA21CE /* AlertControllerExtensions.swift in Sources */,
 				1D250ECE219D746600FA21CE /* AnchorExtensions.swift in Sources */,
 				1D250F26219DD03D00FA21CE /* AttributeName.swift in Sources */,
+				1DA2483E21BAE3C900009E03 /* ArrayExtensions.swift in Sources */,
 				1D250EDD219D84F900FA21CE /* UIPickerViewX.swift in Sources */,
 				1D250F0B219D909900FA21CE /* UISliderX.swift in Sources */,
 				1D250EDE219D84F900FA21CE /* PickerViewModel.swift in Sources */,
+				1DA2482221BAE0B700009E03 /* PasswordTextField.swift in Sources */,
 				1D250EEA219D8C6C00FA21CE /* UIApplicationExtensions.swift in Sources */,
 				1D250F20219DD03D00FA21CE /* TextEffect.swift in Sources */,
 				1D250F06219D909900FA21CE /* UIViewX.swift in Sources */,
+				1DA2482321BAE0B700009E03 /* SecureTextToggleButton.swift in Sources */,
 				1D250F29219DD03D00FA21CE /* WritingDirection.swift in Sources */,
 				1D250F21219DD03D00FA21CE /* String+SwiftyAttributes.swift in Sources */,
 				1D250F08219D909900FA21CE /* UIViewXRadialGradient.swift in Sources */,
