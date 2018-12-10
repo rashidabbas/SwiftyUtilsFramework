@@ -32,3 +32,33 @@ public extension UIAlertController {
     }
 }
 
+
+public func showAlert(title: String = "" , message: String = "" , onOkClick: @escaping (() -> ()) = {})  {
+    DispatchQueue.main.async {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            onOkClick()
+        }))
+        UIApplication.topViewController?.present(alertController, animated: true, completion: nil)
+    }
+}
+
+public func showConfirmationAlert(title: String = "" , message: String = "" , okTitle: String = "Submit" , cancelTitle: String = "Cancel", okClick: @escaping () -> () , cancelClick: @escaping () -> ())  {
+    let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    alertController.addAction(UIAlertAction(title: okTitle, style: .default, handler: { (action) in
+        okClick()
+        alertController.dismiss(animated: true, completion: nil)
+    }))
+    alertController.addAction(UIAlertAction(title: cancelTitle, style: .destructive, handler: { (action) in
+        cancelClick()
+    }))
+    UIApplication.topViewController?.present(alertController, animated: true, completion: nil)
+}
+
+public func showAPIErrorAlert(title: String = "Error", message: String = "Something went wrong please try again." , okClick: @escaping () -> () , cancelClick: @escaping () -> ())  {
+    showConfirmationAlert(title: title, message: message, okTitle: "Try Again", cancelTitle: "cancel", okClick: {
+        okClick()
+    }, cancelClick: {
+        cancelClick()
+    })
+}
