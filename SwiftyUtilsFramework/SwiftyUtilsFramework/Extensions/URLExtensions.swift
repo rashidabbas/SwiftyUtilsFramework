@@ -8,7 +8,7 @@
 import UIKit
 import AVKit
 public extension Int32 {
-    public func formatTimeFromSeconds() -> String {
+    func formatTimeFromSeconds() -> String {
         let seconds: Int32 = self%60
         let minutes: Int32 = (self/60)%60
         //        let hours: Int32 = totalSeconds/3600
@@ -16,7 +16,7 @@ public extension Int32 {
     }
 }
 public extension URL {
-    public func getDuration() -> String {
+    func getDuration() -> String {
         let asset = AVAsset(url: self)
         let duration = asset.duration
         let durationTime = CMTimeGetSeconds(duration)

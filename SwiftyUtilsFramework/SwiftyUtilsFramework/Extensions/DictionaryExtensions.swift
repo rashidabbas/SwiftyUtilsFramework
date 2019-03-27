@@ -9,7 +9,7 @@
 import UIKit
 
 public extension Dictionary {
-    public func stringFromHttpParameters() -> String {
+    func stringFromHttpParameters() -> String {
         var parametersString = ""
         for (key, value) in self {
             if let key = key as? String,
@@ -21,7 +21,7 @@ public extension Dictionary {
         parametersString = String(parametersString.prefix(upTo: lastIndex))
         return parametersString.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
     }
-    public func queryItems() -> [URLQueryItem] {
+    func queryItems() -> [URLQueryItem] {
         var queryItems = [URLQueryItem]()
         for (key , value) in self {
             if let key = key as? String,let value = value as? String {
@@ -31,7 +31,7 @@ public extension Dictionary {
         return queryItems
     }
     
-    public var json: String {
+    var json: String {
         let invalidJson = "Not a valid JSON"
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: self, options: .prettyPrinted)
@@ -41,7 +41,7 @@ public extension Dictionary {
         }
     }
     
-    public func toJsonString() -> String {
+    func toJsonString() -> String {
         return json
     }
 }

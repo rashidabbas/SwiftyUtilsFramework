@@ -10,7 +10,7 @@ import UIKit
 import UserNotifications
 public extension UIApplication {
     
-    public var screenShot: UIImage?  {
+    var screenShot: UIImage?  {
         
         if let rootViewController = keyWindow?.rootViewController {
             let scale = UIScreen.main.scale
@@ -26,19 +26,19 @@ public extension UIApplication {
         return nil
     }
     
-    public class var mainWindow: UIWindow? {
+    class var mainWindow: UIWindow? {
         return UIApplication.shared.keyWindow
     }
     
-    public func clearAllNotification() {
+    func clearAllNotification() {
         let center = UNUserNotificationCenter.current()
         center.removeAllDeliveredNotifications()
     }
-    public var statusBarView: UIView? {
+    var statusBarView: UIView? {
         return value(forKey: "statusBar") as? UIView
     }
     
-    public class var topViewController: UIViewController? {
+    class var topViewController: UIViewController? {
         return getTopViewController()
     }
     
@@ -58,7 +58,7 @@ public extension UIApplication {
     }
 }
 public extension Equatable {
-    public func share() {
+    func share() {
         let activity = UIActivityViewController(activityItems: [self], applicationActivities: nil)
         UIApplication.topViewController?.present(activity, animated: true, completion: nil)
     }

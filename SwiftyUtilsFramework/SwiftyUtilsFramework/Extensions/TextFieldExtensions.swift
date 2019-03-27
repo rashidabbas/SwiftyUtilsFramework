@@ -8,7 +8,7 @@
 
 import UIKit
 public extension UITextField {
-    public func rightViewWithImage(image: UIImage)  {
+    func rightViewWithImage(image: UIImage)  {
         rightView?.removeFromSuperview()
         rightViewMode = .always
         let img = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
@@ -17,13 +17,13 @@ public extension UITextField {
         rightView = img
     }
     
-    public func leftImage(image: UIImage) {
+    func leftImage(image: UIImage) {
         leftViewMode = .always
         let lv = UIImageView()
         lv.image = image
         leftView = lv
     }
-    public func moveToNextField()  {
+    func moveToNextField()  {
         let tag = self.tag + 1
         if let nextTextField = superview?.viewWithTag(tag) as? UITextField {
             nextTextField.becomeFirstResponder()
@@ -32,7 +32,7 @@ public extension UITextField {
         self.resignFirstResponder()
     }
     
-    public func moveToNextFieldInTableViewCell()  {
+    func moveToNextFieldInTableViewCell()  {
         let tag = self.tag + 1
         if let nextTextField = superview?.superview?.viewWithTag(tag) as? UITextField {
             nextTextField.becomeFirstResponder()
