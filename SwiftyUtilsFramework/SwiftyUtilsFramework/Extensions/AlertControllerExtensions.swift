@@ -9,7 +9,7 @@
 import UIKit
 
 public extension UIAlertController {
-    public convenience init(title: String?, customView: UIView, fallbackMessage: String?, preferredStyle: UIAlertController.Style) {
+    convenience init(title: String?, customView: UIView, fallbackMessage: String?, preferredStyle: UIAlertController.Style) {
         
         let marker = "__CUSTOM_CONTENT_MARKER__"
         self.init(title: title, message: marker, preferredStyle: preferredStyle)
