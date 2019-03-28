@@ -13,6 +13,11 @@ import UserNotifications
 import AVKit
 import Photos
 public extension UIViewController {
+    func makeNavBarTransparent() {
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+    }
     func requestMicrophone(completion: @escaping (Bool) -> ()) {
         AVAudioSession.sharedInstance().requestRecordPermission {(granted: Bool)-> Void in
             print("Permission = \(granted)")
@@ -173,5 +178,56 @@ public extension UIViewController {
             return tab.topMostViewController()
         }
         return self.presentedViewController!.topMostViewController()
+    }
+    
+    func openPhotoPicker<T: UIImagePickerControllerDelegate>(delegate: T) where T: UINavigationControllerDelegate {
+        print("Click Image")
+        checkPhotoLibraryPermission { (isGranted) in
+            if isGranted {
+                print("Permission Granted")
+                self.showProfileImagePickerOptions(delegate: delegate)
+            } else {
+                print("Permission NOt Granted")
+            }
+        }
+    }
+    func showProfileImagePickerOptions<T: UIImagePickerControllerDelegate>(delegate: T) where T: UINavigationControllerDelegate {
+        let alertViewController = UIAlertController(title: "", message: "Choose your option", preferredStyle: .actionSheet)
+        let camera = UIAlertAction(title: "Camera", style: .default, handler: { (alert) in
+            self.openCamera(delegate: delegate)
+        })
+        let gallery = UIAlertAction(title: "Gallery", style: .default) { (alert) in
+            //            UINavigationBar.appearance().barTintColor = UIColor.primaryColor//UIColor.primaryColor
+            self.openGallary(delegate: delegate)
+        }
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (alert) in
+            
+        }
+        alertViewController.addAction(camera)
+        alertViewController.addAction(gallery)
+        alertViewController.addAction(cancel)
+        self.present(alertViewController, animated: true, completion: nil)
+    }
+    
+    func openCamera<T: UIImagePickerControllerDelegate>(delegate: T) where T: UINavigationControllerDelegate {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera) {
+            let pickerController = UIImagePickerController()
+            pickerController.allowsEditing = true
+            pickerController.delegate = delegate
+            pickerController.sourceType = UIImagePickerController.SourceType.camera
+            self.present(pickerController, animated: true, completion: nil)
+        }
+        else {
+            showAlert(title: "Warning", message: "You don't have camera", onOkClick: {})
+        }
+    }
+    func openGallary<T: UIImagePickerControllerDelegate>(delegate: T)  where T: UINavigationControllerDelegate {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary) {
+            let pickerController = UIImagePickerController()
+            pickerController.allowsEditing = true
+            pickerController.delegate = delegate
+            pickerController.sourceType = UIImagePickerController.SourceType.photoLibrary
+            self.present(pickerController, animated: true, completion: nil)
+        }
     }
 }

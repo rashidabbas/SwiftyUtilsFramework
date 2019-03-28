@@ -9,7 +9,7 @@
 import UIKit
 
 public extension UINavigationBar {
-    public func shouldRemoveShadow(_ value: Bool) -> Void {
+    func shouldRemoveShadow(_ value: Bool) -> Void {
         if value {
             self.setValue(true, forKey: "hidesShadow")
         } else {
@@ -19,7 +19,7 @@ public extension UINavigationBar {
 }
 
 public extension UINavigationController {
-    public func backToViewController(vc: AnyClass) {
+    func backToViewController(vc: AnyClass) {
         for element in viewControllers as Array {
             if element.isKind(of: vc) {
                 self.popToViewController(element, animated: true)

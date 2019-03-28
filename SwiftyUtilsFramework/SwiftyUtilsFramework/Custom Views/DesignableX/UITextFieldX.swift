@@ -128,4 +128,7 @@ open class UITextFieldX: UITextField {
             self.layer.cornerRadius = cornerRadius
         }
     }
+    public func isEmpty() -> Bool {
+        return text?.isEmpty ?? true
+    }
 }

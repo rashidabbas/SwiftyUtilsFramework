@@ -44,5 +44,12 @@ public extension Dictionary {
     func toJsonString() -> String {
         return json
     }
+    func convertDictionaryToJsonString() -> String {
+        let jsonData = try? JSONSerialization.data(withJSONObject: self, options: JSONSerialization.WritingOptions())
+        if let jsonString = NSString(data: jsonData!, encoding: String.Encoding.utf8.rawValue) {
+            return "\(jsonString)"
+        }
+        return ""
+    }
 }
 
