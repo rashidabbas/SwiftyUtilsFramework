@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SwiftyUtilsFramework"
-  s.version      = "1.0.9"
+  s.version      = "1.1.0"
   s.swift_version = "5.0"
   s.summary      = "This is an amazing framework for all developer from beginner to expert."
   s.description  = "This is an amazingly Utils framework written by Mr Rashid Abbas for utility purpose which is used to boost your development. It contains all utility classes regarding Autolayout and many more extensions functions."
