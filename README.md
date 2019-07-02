@@ -3,6 +3,11 @@ This is an amazing utility framework for all level of developers.
 
 By using this library you can set your views constraints with auto-layout in a single line of code.
 
+Install Pods:
+
+pod 'SwiftyUtilsFramework'
+
+
 Usage:
  
   someview.anchor(leading: leadingAnchor, top: topAnchor, trailing: trailing, bottom: bottom, padding: .init(top: 10, left: 10, bottom: 0, right: 0), size: .init(width: 50, height: 50))
